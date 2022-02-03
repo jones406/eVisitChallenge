@@ -35,14 +35,25 @@ THEN they are sorted by highest to lowest traffic
 
 ## Approach and Future Improvements
 What would you do differently if you had more time?
+   - Discuss with fellow coders to work out a better solution, as I'm sure this isn't it
+   - Look into whether local storage is the way to store this kind (and amount) of data, given a db is off the table
+   - 
 What is the runtime complexity of each function?
+   - the request handled function would be called each time a request is made, so pretty much continually
+   - the top100() function needs additional code to only run at the end of the day prior to the clear() function
+   -  the clear() function runs once every 24 hours
 How does your code work?
+    - I chose the ipify API as it does not have limitations to the number of requests. It is reliable, fast, fully funded, and has been around for years. No permissions needed for use. 
+    - IP addresses are stored to an array and then unique occurrences are counted.
+    I didn't have time, but from here you'd take the count and sort from greatest to least using .sort --  and display the results in the console or however it is preferred.
 What other approaches did you decide not to pursue?
+   - The async function I commented out at the bottom of the script.js file
 How would you test this?
+   - You could test on a smaller scale site/service to work out any bugs, then implement it into your actual service.
 
 ## Sources
-- [node.js dns](https://nodejs.org/api/dns.html#dns_dns_lookup_hostname_options_callback)
+- [Ipify](https://github.com/rdegges/ipify-api)
 
 ## Questions
-For questions, please email me.  
+For questions:  
 [Email Me](mailto:brookejones406@gmail.com)  
